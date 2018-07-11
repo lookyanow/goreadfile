@@ -13,9 +13,8 @@ func main() {
 		fmt.Println("No file argument")
 		os.Exit(1)
 	}
-	fileName := os.Args[1]
 
-	fd, err := os.Open(fileName)
+	fd, err := os.Open(os.Args[1])
 	if err != nil {
 		fmt.Println(err)
 	}
